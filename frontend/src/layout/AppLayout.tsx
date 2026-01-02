@@ -29,7 +29,7 @@ export default function AppLayout() {
       <Layout>
         <Header style={{ background: '#fff', padding: '0 16px' }}>
           <div className="flex items-center justify-between">
-            <div className="font-semibold">WMS（测试实习生练习版）</div>
+            <div className="font-semibold">WMS 仓库管理系统</div>
             <Link to="/login">登录</Link>
           </div>
         </Header>
