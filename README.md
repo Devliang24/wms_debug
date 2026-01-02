@@ -1,11 +1,11 @@
 # WMS
-本项目是一个简化版 WMS（仓库管理系统），用于测试实习生练习：
+本项目是一个简化版 WMS（仓库管理系统），用于测试：
 - 按 `docs/PRD.md` 对照需求进行测试
-- 在系统中发现并报告缺陷（系统内预埋了一批 Bug）
+- 在系统中发现并报告缺陷
 
 目录：
-- `docs/PRD.md`：产品需求文档（测试人员可见）
-- `docs/BUG_LIST.md`：预埋 Bug 清单（仅出题者/维护者可见，勿发给实习生）
+- `docs/PRD.md`：产品需求文档
+- `docs/业务背景介绍.md`：业务背景介绍
 
 ## 启动（开发环境）
 ### 1) 后端（Docker，推荐）
@@ -35,7 +35,7 @@ VITE_API_BASE_URL=/api npm run dev
 ```
 说明：`VITE_API_BASE_URL=/api` 时，前端会请求同源的 `/api/*`，再由 `vite.config.ts` 转发到 `http://127.0.0.1:8000`。
 
-如果希望直接请求后端（可能触发浏览器 CORS 问题，用于测试缺陷）：
+如果希望直接请求后端：
 ```bash
 cd wms/frontend
 VITE_API_BASE_URL=http://127.0.0.1:8000 npm run dev
@@ -47,4 +47,4 @@ VITE_API_BASE_URL=http://127.0.0.1:8000 npm run dev
 - 统一响应结构/错误码/状态机/字段校验：见 `docs/PRD.md`
 
 ## 注意
-该仓库包含用于教学目的的“预埋缺陷”。不要用于生产环境。
+该项目为开发测试环境，不要用于生产环境。
